@@ -81,17 +81,87 @@ export default function Home() {
         </div>
       </div>
       <div className='w-[25%] flex flex-col gap-2 lg:gap-4'>
-        <Card link='/menu' src='/qitchen-menu-image.png' text='menu' />
-        <Card
-          link='/reservation'
-          src='/qitchen-reservation-image.png'
-          text='reservation'
+        <div className='relative rounded-lg h-[265px] w-96 border-muted overflow-hidden '>
+      <>
+        <Image
+          src={'/qitchen-menu-image.png'}
+          alt={`Menu - card image`}
+          width={500}
+          height={500}
+          className='h-72 w-96 rounded-lg absolute -z-20'
         />
-        <Card
-          link='/about'
-          src='/qitchen-restaurant-image.png'
-          text='our restaurant'
+      </>
+      <div className=' bg-muted w-fit absolute right-0 bottom-0 px-4 py-2 text-default rounded-ss-xl rounded-ee-md '>
+        <Link
+          href={'/menu'}
+          className='flex gap-4 items-center group transition-all'
+        >
+          <span className={'text-md font-thin uppercase'}>menu</span>
+
+          <Image
+            alt={`menu - link arrow`}
+            src={'/link-badge.svg'}
+            width={80}
+            height={80}
+            className='size-8 text-white group-hover:translate-x-2  duration-100 ease-in-out'
+          />
+        </Link>
+      </div>
+    </div>
+        <div className='relative rounded-lg h-[265px] w-96 border-muted overflow-hidden '>
+      <>
+        <Image
+          src={'/qitchen-reservation-image.png'}
+          alt={`about - card image`}
+          width={500}
+          height={500}
+          className='h-72 w-96 rounded-lg absolute -z-20'
         />
+      </>
+      <div className=' bg-muted w-fit absolute right-0 bottom-0 px-4 py-2 text-default rounded-ss-xl rounded-ee-md '>
+        <Link
+          href={'/reservation'}
+          className='flex gap-4 items-center group transition-all'
+        >
+          <span className={'text-md font-thin uppercase'}>reservation</span>
+
+          <Image
+            alt={`reservation - link arrow`}
+            src={'/link-badge.svg'}
+            width={80}
+            height={80}
+            className='size-8 text-white group-hover:translate-x-2  duration-100 ease-in-out'
+          />
+        </Link>
+      </div>
+    </div>
+        <div className='relative rounded-lg h-[265px] w-96 border-muted overflow-hidden '>
+      <>
+        <Image
+          src={'/qitchen-restaurant-image.png'}
+          alt={`about - card image`}
+          width={500}
+          height={500}
+          className='h-72 w-96 rounded-lg absolute -z-20'
+        />
+      </>
+      <div className=' bg-muted w-fit absolute right-0 bottom-0 px-4 py-2 text-default rounded-ss-xl rounded-ee-md '>
+        <Link
+          href={'/about'}
+          className='flex gap-4 items-center group transition-all'
+        >
+          <span className={'text-md font-thin uppercase'}>our restaurant</span>
+
+          <Image
+            alt={`about - link arrow`}
+            src={'/link-badge.svg'}
+            width={80}
+            height={80}
+            className='size-8 text-white group-hover:translate-x-2  duration-100 ease-in-out'
+          />
+        </Link>
+      </div>
+    </div>
       </div>
     </main>
   );
